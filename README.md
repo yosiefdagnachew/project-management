@@ -33,3 +33,4 @@ This Project Management Web App is a comprehensive solution designed specificall
 - **Real-Time Communication:** WebSockets enable instant messaging and updates.
 - **Authentication:** Employ JWT (JSON Web Tokens) for secure user authentication.
 - **Version Control:** Integrated with Git for code repository management.
+"# project-management" 
