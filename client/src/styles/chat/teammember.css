@@ -1,0 +1,60 @@
+.teammembersSec {
+    background-color: rgb(140, 192, 252);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.team-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0 1rem;
+    width: 100%;
+    position: relative;
+}
+
+#member {
+    display: grid;
+    grid-template-columns: .1fr .9fr;
+    align-items: center;
+    width: 90%;
+    background-color: #fff;
+    padding: .5rem;
+    margin: .2rem;
+    box-shadow: 0 4px 9px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-info h4 {
+    font-size: .8rem;
+}
+
+.member-info p {
+    font-size: .7rem;
+}
+
+.member-info>* {
+    margin: 0;
+}
+
+#member .profileSec {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#member .profileSec img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

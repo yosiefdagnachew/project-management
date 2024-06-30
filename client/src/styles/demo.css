@@ -1,0 +1,50 @@
+#demo-container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background-color: #00000071;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    backdrop-filter: blur(3px);
+}
+#demo-container>#infos > div{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    box-shadow: 0 7px 19px rgba(0, 0, 0, 0.322);
+    border-radius: 10px;
+}
+#demo-container>#infos > div> div{
+    padding: 1rem;
+    border-right: 1px solid #e6e0e0;
+}
+
+#demo-container>#infos p{
+color: #191a1a;
+font-size: .8rem;
+}
+#demo-container>#infos p.password{
+color: #d1e7e7;
+}
+
+
+.close-demo{
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #868383;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}

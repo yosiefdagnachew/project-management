@@ -1,0 +1,187 @@
+.editOptions{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.418);
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+    align-items:start;
+    z-index: 10;
+    padding-top:3rem;
+}
+
+.editOptions form{
+    max-width: 60%;
+    max-height: 100%;
+    display: grid;
+    place-items: center;
+    text-align: left;
+    box-shadow:0 10px 33px rgba(0,0,0,.05);
+    border-radius:10px;
+    padding: 5rem;
+    background-color: rgba(255, 255, 255, 0.932);
+}
+
+
+
+.editOptions form > div{
+    width: 100%;
+    margin: .3rem;
+}
+.editOptions .close-icns{
+    position:absolute;
+    top:1rem;
+    right:1rem;
+    font-size:1.3rem;
+}
+
+
+.editOptions form input,.editOptions form textarea{
+    padding: .5rem 1rem;
+    border: 1px solid #eee;
+    outline: none;
+    resize: none;
+}
+.editOptions form textarea{
+    width: 100%;
+    padding: 1rem;
+}
+.editOptions form label{
+   color: #8a8c8f;
+    font-size: .8rem;
+}
+
+.editOptions form .basicInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.editOptions form .basicInfo > *{
+    flex: 1;
+}
+
+.editOptions form .dropdowns{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    border: 1px solid #eee;
+    background-color: #fff;
+    width: 100%;
+    margin-left: 1rem;
+    
+}
+
+.editOptions form .dropdowns > div{
+    position: relative;
+    padding: 0rem;
+}
+.editOptions form .dropdowns > div>p{
+    font-size: .8rem;
+    color: rgb(88, 85, 85);
+    padding:.5rem;
+    /* background-color:rgb(88, 180, 255); */
+    /* width:100%; */
+}
+.editOptions form .dropdowns > div>p span{
+    background-color:Orange;
+    padding:.2rem .5rem;
+    color:#fff;
+}
+.editOptions form .dropdowns > div>p:hover{
+    background-color:rgb(216, 218, 219);
+    color:#1f1e1e;
+}
+.editOptions form .dropdowns > div>ul{
+    display:grid;
+    place-items:center;
+    position:absolute;
+    color:#333;
+    top:3rem;
+    z-index:10;
+}
+.editOptions form .dropdowns #all-empolloyee{
+    width:200px;
+    color:#000;
+    max-height:500px;
+}
+.editOptions form .dropdowns #all-empolloyee .employee:hover{
+   color:#333;
+}
+.editOptions form .dropdowns > div>ul li{
+    padding:.3rem .5rem;
+    list-style-type:none;
+    color:#333;
+    width:100%;
+    position:relative;
+    left:0;
+    margin:0;
+    padding:.3rem 1rem;
+    background-color:#eee;
+}
+.editOptions form .dropdowns > div>ul li:hover{
+    background-color:#eee;
+}
+
+input[type='submit']{
+    place-self:center;
+    background-color:rgb(143, 195, 255);
+    color:#fff;
+    max-width:100px;
+}
+
+/* project managers style */
+
+#updateside{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    background-color: rgb(135, 199, 255);
+    padding: .4rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.103);
+    position: absolute;
+    z-index: 5;
+}
+
+#updateside .employee{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: .3rem .5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+#updateside .employee .profilePic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+#updateside .employee div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+#updateside .employee div:nth-child(2) > *{
+   margin: 0;
+}
+#updateside .employee div:nth-child(2) > h5{
+  font-size: .7rem;
+  color: #555252;
+}
+#updateside .employee div:nth-child(2) > p{
+  font-size: .6rem;
+  color: #585757;
+}
+
+#updateside .employee .profilePic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

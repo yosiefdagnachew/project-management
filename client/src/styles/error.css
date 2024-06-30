@@ -1,0 +1,41 @@
+.error-showing{
+    color: #fff;
+    display: grid;
+    gap: 1rem;
+    height: 100vh;
+    width: 100vw;
+    margin:0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    background-color: #8d89898a;
+    place-items: center;
+    align-items: start;
+    backdrop-filter: blur(2px);
+}
+
+.close-box{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.error-showing .errorShowing{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 10px;
+    background-color: rgb(221, 71, 71);
+    /* font-size: .8rem; */
+    padding:.3rem 1rem;
+    text-align: left;
+    margin-top: 1rem;
+    max-width: 60%;
+    max-height: 10%;
+}
+.error-showing .errorShowing .icon{
+    font-size: 3rem;
+}

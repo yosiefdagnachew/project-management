@@ -1,0 +1,88 @@
+.registration-page {
+ display: grid;
+ position: relative;
+ overflow: hidden;
+ grid-template-columns: repeat(2, 1fr);
+ font-family: 'Poppins', sans-serif;
+}
+
+.registration-page .image-background{
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.096),black),url('../../public//images/register.jpg');
+}
+.registration-form{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+}
+.registration-form >*{
+  margin: 0;
+}
+
+.registration-form form{
+  height: 70%;
+  width: 90%;
+}
+
+.registration-page h1 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+
+.form-group ul li{
+    list-style: none;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+.form-group ul li:hover{
+   color: #0056b3;
+}
+
+.form-sex ul{
+  right: 10%;
+}
+
+input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.profile label{
+  font-size:2rem;
+  place-self:start;
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  text-align:left;
+}
+
+.profile label p{
+  font-size:1rem;
+}
+
+a.account{
+  margin-left: 5rem;
+}
+
+a.account:hover{
+    background-color: transparent;
+}
+
+button{
+  width:100%;
+  background-color:blue;
+}

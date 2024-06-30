@@ -1,0 +1,48 @@
+.headerContainer{
+    z-index: 10;
+    padding:0rem 1rem;
+    position: fixed;
+    right: 0%;
+    left: 0;
+}
+
+
+.logo .icon{
+    font-size: 1.5rem;
+    display: grid;
+    place-items: center;
+    color: #8ae2ff;
+}
+
+nav,.sign{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sign{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.sign > *{
+    border: 1px solid #000;
+    padding: .4rem 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: rgb(43, 159, 255);
+    color: #fdfdfd;
+    border: 1px solid rgba(34, 33, 33, 0.096);
+    border-radius: 4px;
+    border:2px solid transparent;
+}
+
+.sign > *:first-child{
+    color: #ffffff;
+    background-color: #333;
+}
+.sign > *:nth-child(2):hover{
+    color: #ffffff;
+    border:2px solid #fff;
+}

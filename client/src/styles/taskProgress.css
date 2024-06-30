@@ -1,0 +1,25 @@
+#progress1 > * {
+  margin: 0.1rem;
+}
+ #progress1 .upperProgressBar {
+  position: relative;
+  width: 80px;
+ 
+  box-shadow:0 3px 7px #cccaca;
+  height: 5px;
+}
+#progress1 .upperProgressBar .innerProgressBar {
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+ #progress1 p:nth-child(1) {
+  align-self: start;
+  font-size: 0.7rem;
+}
+ #progress1 p:nth-child(3) {
+  align-self: end;
+  font-size: 0.7rem;
+}

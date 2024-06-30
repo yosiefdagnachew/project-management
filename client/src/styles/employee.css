@@ -1,0 +1,205 @@
+
+
+.systemUserContainer {
+  height: 100vh; /* Example: Set container height to full viewport height */
+  overflow: auto; /* Enable vertical scrolling when content overflows */
+  /* Additional styles for your container */
+}
+
+
+.systemContainer > h1 {
+  background: linear-gradient(to right, rgb(228, 206, 110), transparent);
+  padding: 0.5rem 1rem;
+}
+.employee-info-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 35;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.coverpic {
+  background-image: url("../../public/images/Login.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+}
+
+.coverpic > * {
+  margin: 0;
+}
+
+.coverpic h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+  color: #f0ebeb;
+}
+
+.coverpic p {
+  color: #eee;
+  font-size: 1.2rem;
+}
+
+.back-icon{
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  color: #fff;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #c2bfbf60;
+  display: grid;
+  place-items: center;
+}
+
+.back-icon:hover{
+  background-color: #eeeeee59;
+}
+
+.main-info {
+  display: grid;
+  grid-template-columns: 0.25fr 0.75fr;
+}
+
+#profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -3rem;
+}
+
+.information > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.information > div:nth-child(1) > * {
+  margin: 0;
+}
+
+.account-status {
+  position: relative;
+}
+
+.setAccountStatus {
+  position: absolute;
+  top: -1rem;
+  right: -6rem;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.setAccountStatus > * {
+  border: 1px solid #eee;
+  margin: 0rem;
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  background-color: #f8f5f5;
+}
+
+.setAccountStatus > *:hover {
+  background-color: #ffffff;
+}
+
+.pro-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid #fff;
+}
+
+.pro-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.employee-status {
+  height: 100vh;
+  height: 100%;
+  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  background: linear-gradient(to right, #eee, #fff);
+  padding: 4rem 3rem;
+}
+
+.employee-status > div {
+  background: linear-gradient(to top, #6275e0, #8ed9fc);
+  padding: 3rem 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.089);
+  border-radius: 10px;
+}
+.employee-status > div > * {
+  margin: 0;
+}
+.employee-status > div h1 {
+  font-size: 3rem;
+}
+
+@media (max-width: 767px) {
+  .employee-info-page {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .main-info {
+    display: grid;
+    grid-template-columns: 0.1fr;
+  }
+
+  .coverpic {
+    height: 6rem;
+  }
+
+  .coverpic h1 {
+    font-size: 1.5rem;
+  }
+
+  .coverpic p {
+    font-size: 1rem;
+  }
+  .profile-info {
+    top: -1rem;
+  }
+
+  .pro-image {
+    width: 100px;
+    height: 100px;
+    border: 5px solid #fff;
+  }
+  .employee-status {
+    height: 100%;
+    width: 100vw;
+    display: grid;
+    padding: 3rem 0;
+  }
+  .employee-status {
+    width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  }
+  .employee-status > div {
+    width: 95vw;
+  }
+}

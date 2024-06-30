@@ -1,0 +1,613 @@
+.projectDetailSection {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow: hidden;
+}
+
+.projectDetailSection .pro-title a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin: 0.5rem 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.pro-title .title {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pro-title .title h1 {
+  font-size: 1.3rem;
+  padding: 0;
+  text-transform: Capitalize;
+}
+
+.pro-title .title > * {
+  margin: 0;
+  text-align: left;
+}
+.pro-title .title > p {
+  color: #747070;
+  font-size: 0.8rem;
+}
+
+.projectDetailSection .projectInfo .pro-title a:hover {
+  background-color: rgb(182, 182, 185);
+}
+
+.projectDetailSection .projectInfo .pro-title .deadline p {
+  color: #b6b2b2;
+  font-size: 0.7rem;
+}
+.projectDetailSection .projectInfo .pro-title .deadline p:nth-child(2) {
+  border-right: 1px solid rgb(102, 98, 98);
+  padding: 0 1rem;
+}
+.projectDetailSection .projectInfo .pro-title .deadline h5 {
+  color: #686565;
+  font-weight: 500;
+}
+
+.pro-title .editProject {
+  position: absolute;
+  color: #333232;
+  top: 1rem;
+  right: 2rem;
+  width: 30px;
+  height: 30px;
+  background-color: #f5f2f2;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.pro-title .editProject:hover {
+  background-color: #80c4fc;
+  color: #fff;
+}
+
+.tasklist .pro-title .projectManagerName {
+  color: rgb(13, 13, 14);
+  border-radius: 0.4rem;
+  background-color: #eee;
+  padding: 0.2rem 0.5rem;
+}
+
+.projectDetailSection .projectInfo .pro-title > div:nth-child(1) {
+  display: flex;
+  align-items: start;
+  gap: 4rem;
+  background-color: #ffffff;
+  position: relative;
+  left: 0;
+  padding: 0.5rem 3rem;
+  border-bottom: 1px solid #eee;
+}
+section.projectDetailSection .projectInfo .pro-title > div:nth-child(2) {
+  padding: 0.2rem 5rem;
+}
+
+.projectDetailSection .projectInfo .pro-title {
+  display: flex;
+  flex-direction: column;
+}
+.projectDetailSection .projectInfo .pro-title > * {
+  margin: 0;
+}
+.projectDetailSection .projectInfo .pro-title > div:nth-child(1) {
+  margin: 0;
+  padding: 0.5rem 4rem;
+}
+.projectDetailSection .projectInfo .pro-title > div:nth-child(2) {
+  margin: 0;
+  padding: 0 4rem;
+}
+.projectDetailSection .projectInfo .pro-title > div:nth-child(2) p {
+  color: #5f5d5d;
+  font-size: 0.7rem;
+  text-align: left;
+}
+
+/* navbar designing */
+.project-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #fff;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+.projectDetailSection .projectInfo .project-navbar > li {
+  text-decoration: none;
+  color: #272626;
+  text-transform: capitalize;
+  position: relative;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+  list-style-type: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.deadline .project-navbar > li::after {
+  position: absolute;
+  width: 0;
+  height: 2px;
+  content: "";
+  left: 30%;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+section.projectDetailSection .projectInfo div.project-navbar > li.active {
+  background-color: #ffffff;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+section.projectDetailSection
+  .projectInfo
+  div.project-navbar
+  > li.active::after {
+  width: 40%;
+  background-color: orange;
+}
+
+.projectDetailSection .projectInfo .project-navbar > li:hover {
+  background-color: #eee;
+  border-radius: 20px;
+}
+
+.projectDetailSection .projectInfo .pro-title .deadline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projectDetailSection .projectInfo .pro-title .deadline > h2 {
+  position: relative;
+  top: -1rem;
+  font-size: 0.9rem;
+  color: #5a5858;
+}
+.projectDetailSection .projectInfo .pro-title .deadline > * {
+  margin: 0;
+}
+
+.projectDetailSection .projectInfo .pro-title .deadline > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0;
+}
+.projectDetailSection .projectInfo .pro-title .deadline span {
+  color: #fff;
+  background-color: rgb(218, 37, 37);
+  border-radius: 5px;
+  padding: 0.2rem 0.5rem;
+}
+.project-progress,
+.project-budget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 1rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* border: 1px solid #eee; */
+  margin: 0.4rem 1rem;
+}
+.project-progress {
+  background: linear-gradient(90deg, #ffffff 0%, #f7f7f8 100%);
+}
+.project-progress h1,
+.project-budget h1 {
+  font-size: 1.5rem;
+  color: rgb(52, 52, 53);
+}
+.project-progress p,
+.project-budget p {
+  font-size: 0.8rem;
+  color: rgb(52, 52, 53);
+}
+
+.project-progress > div {
+  /* border: 1px solid #eee; */
+  border-radius: 5px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-budget > div > div:nth-child(1),
+.project-budget > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-progress > div > *,
+.project-budget > div > div:nth-child(1) > *,
+.project-budget > div:nth-child(1) > * {
+  margin: 0;
+}
+.project-progress > div > p,
+.project-budget > div > div:nth-child(1) > p {
+  color: #706e6e;
+}
+
+.project-budget > div {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  flex: 1;
+  padding: 1rem;
+  background: linear-gradient(90deg, #ffffff 0%, #efeff1 100%);
+}
+
+.project-budget > div:nth-child(1) {
+  padding: 3.5rem 0;
+}
+
+.project-budget > div:nth-child(2),
+.project-budget > div:nth-child(3) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pro-description_navigation {
+  display: grid;
+  grid-template-columns: 5.5fr 4.5fr;
+  gap: 3rem;
+  background-color: rgb(255, 255, 255);
+  place-items: center;
+}
+.pro-description_navigation > p {
+  max-height: 50px;
+  overflow: auto;
+}
+.pro-description_navigation > div.project-navbar {
+  max-height: 70px;
+  overflow: auto;
+  background-color: #eee;
+  border-radius: 120px;
+  max-height: 30px;
+}
+
+.project-list .p-project .progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#members {
+  background-color: #eee;
+  gap: 0.31rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50px;
+  height: 30px;
+}
+
+#members div {
+  background-color: #ffffff;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#members div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+div#progress {
+  gap: 0.5rem;
+}
+
+#members .add {
+  margin-left: 0.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+/* sidebar create task box style */
+
+#createTaskBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #948f8f3a;
+  z-index: 10;
+  backdrop-filter: blur(3px);
+}
+
+#taskform {
+  width: 500px;
+  background-color: #fff;
+  position: absolute;
+  right: 0rem;
+  bottom: 0;
+  top: 0rem;
+  transition: all 2s ease-in-out;
+}
+
+#taskform .close-icon {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: #eee;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+#taskform form#form {
+  position: relative;
+  right: 0;
+  width: 87%;
+}
+
+#taskform form#form input,
+#taskform textarea {
+  border: 1px solid #ccc7c75b;
+  width: 83%;
+  margin: auto;
+  margin-top: 0.5rem;
+  outline: none;
+  padding: 1rem;
+  resize: none;
+}
+
+#taskform .setpriority div {
+  border: 1px solid #eeeeee56;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+  font-size: 0.9rem;
+  color: #b3b0b0;
+  padding: 0.5rem;
+  width: 83%;
+  margin: auto;
+  position: relative;
+}
+
+#taskform .setpriority div li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.51rem;
+}
+
+#taskform .setpriority div li:hover {
+  color: #333;
+}
+
+#taskform .setpriority p {
+  margin-top: 2rem;
+  text-align: left;
+  color: #070c36;
+  margin-left: 2.3rem;
+}
+
+#taskform .assignmember {
+  margin-left: 2.3rem;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #333;
+  color: rgb(43, 170, 255);
+  text-decoration: underline;
+}
+
+#taskform button {
+  background-color: rgb(30, 124, 233);
+  color: #ffffff;
+  width: 50%;
+  margin-top: 2rem;
+  border: 2px solid rgb(30, 124, 233);
+  transition: all 0.4s ease-in-out;
+}
+#taskform button:hover {
+  border-color: blue;
+  background-color: transparent;
+  color: #272626;
+}
+#taskform .assignmember {
+  position: relative;
+}
+#taskform .assignmember .team-members {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  max-width: 300px;
+  max-height: 230px;
+  overflow: auto;
+  top: -2rem;
+  left: -11rem;
+  box-shadow: 0 5px 13px rgba(102, 98, 98, 0.24);
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  border-radius: 10px;
+}
+
+#taskform .assignmember .team-members .close {
+  position: absolute;
+  background-color: transparent;
+  font-size: .9rem;
+  display: grid;
+  place-items: center;
+  top: 0rem;
+  right: 0rem;
+}
+
+#taskform .assignmember .team-members .close:hover{
+  background-color: transparent;
+}
+
+
+#taskform .assignmember > p {
+  cursor: pointer;
+}
+
+#taskform .assignmember .team-members > div {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+  border-bottom: 1px solid #eee;
+}
+#taskform .assignmember .team-members > div:hover {
+  background-color: #f7f4f4;
+}
+#taskform .assignmember .team-members > div > * {
+  margin: 0;
+}
+#taskform .assignmember .team-members > div > p:nth-child(2) {
+  font-size: 0.6rem;
+  color: #6d6b6b;
+}
+#taskform .assignmember .team-members > div > p:nth-child(1) {
+  font-size: 0.7rem;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .projectDetailSection {
+    overflow-y: auto;
+  }
+
+  .pro-title .title h1 {
+    font-size: 0.9rem;
+  }
+
+  .pro-title > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pro-title > div:nth-child(1) > * {
+    margin: 0;
+  }
+
+  .projectInfo div.pro-title div.deadline {
+    font-size: 0.8rem;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    width: 98vw;
+    position: relative;
+    left: -4rem;
+  }
+  .pro-description_navigation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pro-description_navigation > * {
+    margin: 0;
+  }
+  .pro-description_navigation > p {
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .pro-description_navigation > div {
+    background-color: green;
+  }
+
+  .project-progress,
+  .project-budget {
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    place-items: center;
+    padding: 1rem;
+    gap: 3rem;
+    border: 1px solid #eee;
+    margin: 0.4rem auto;
+    width: 85vw;
+  }
+
+  .project-progress > *,
+  .project-budget > * {
+    background-color: rgb(184, 248, 184);
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+  }
+
+  .project-budget {
+    margin: 4rem auto;
+  }
+
+  .project-progress {
+    background: linear-gradient(90deg, #ffffff 0%, #f7f7f8 100%);
+  }
+  .project-progress h1,
+  .project-budget h1 {
+    font-size: 1.5rem;
+    color: rgb(52, 52, 53);
+  }
+  .project-progress p,
+  .project-budget p {
+    font-size: 0.8rem;
+    color: rgb(52, 52, 53);
+  }
+
+  .project-progress > div {
+    /* border: 1px solid #eee; */
+    border-radius: 5px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .project-budget > div > div:nth-child(1),
+  .project-budget > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .project-progress > div > *,
+  .project-budget > div > div:nth-child(1) > *,
+  .project-budget > div:nth-child(1) > * {
+    margin: 0;
+  }
+  .project-progress > div > p,
+  .project-budget > div > div:nth-child(1) > p {
+    color: #706e6e;
+  }
+
+  .project-budget > div {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    flex: 1;
+    padding: 1rem;
+    background: linear-gradient(90deg, #ffffff 0%, #efeff1 100%);
+  }
+}

@@ -1,0 +1,231 @@
+
+.mes-not {
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 20px;
+  display: grid;
+  margin: 0.5rem;
+  grid-template-columns: 1fr;
+  font-family:inherit;
+  padding: .2rem 1rem;
+}
+
+.mes-not .messages {
+  background-color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+/* notification styles */
+.notifications {
+  max-height: 80vh;
+  color: #272626;
+  position: relative;
+  border-radius: 10px;
+  
+}
+
+.notifiy-header
+{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 1rem;
+}
+
+.notifiy-header> div{
+  position: relative;
+  font-size: 1.5rem;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: grid;
+  place-items: center;
+}
+.notifiy-header> div span{
+  position: absolute;
+  background-color: red;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  right: -.2rem;
+  top: .1rem;
+  font-size: .7rem;
+}
+.notification-list {
+  position: relative;
+  color: #333;
+  max-height: 80vh;
+  /* background-color: black; */
+  display: grid;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.notification-list > div {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  gap: 1rem;
+  background-color: #ffffffe0;
+  border: 1px solid #dddddd00;
+  cursor: pointer;
+  transition:all 0.2s ease-in-out;
+  border: 1px solid #eee;
+}
+
+.notification-list > div .logo {
+  width: 24px;
+  height: 24px;
+  background-color: #c71e1e;
+  border-radius: 50%;
+  font-size: 1rem;
+  display: grid;
+  place-items: center;
+  color: rgb(243, 239, 239);
+}
+
+
+.notification-list > div p {
+  font-size: 0.8rem;
+}
+.notification-list > div p:nth-of-type(2) {
+  color: #807c7c;
+}
+
+.notification-list > div div.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-list > div div.message > * {
+  margin: 0;
+}
+
+.notify{
+  border:2px solid #333;
+  position:relative;
+  transition:all 2.5s ease-in-out;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow:0 4px 10px rgba(212, 209, 209, 0.39);
+  position: relative;
+  padding: .5rem;
+}
+
+.notify:hover{
+  border: 1px solid rgb(243, 122, 122);
+}
+
+.notification-list .backdrop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000001a;
+  z-index: 10;
+  display: none;
+  backdrop-filter: blur(2px);
+}
+
+.notification-list > div.activeNotification{
+  position: absolute;
+   transform: translateX(-5rem) scale(1.1);
+   box-shadow:0 26px 45px rgba(212, 209, 209, 0.466);
+   background-color: #fff;
+   width: 100%;
+   z-index: 11;
+   padding:1rem;
+   top: 7rem;
+}
+
+.notification-list > div.activeNotification p.no-body{
+  border-bottom: 1px solid #eee;
+}
+
+.notification-header{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+}
+
+.notify .message{
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+}
+
+.notify .message > *{
+  margin:0;
+}
+.notify .message > p.no-body{
+ font-size:.75rem;
+ color:#292828;
+ font-weight:100;
+ padding-bottom: .4rem;
+}
+
+.notify .message .created-date{
+  margin-top:0;
+  font-size:.6rem;
+}
+.notify .message .date{
+  align-self: end;
+  margin: 1rem .4rem;
+}
+
+.notify .message p.no-header{
+  font-size:.8rem;
+  color:#d11c1c;
+  font-weight:bolder;
+}
+
+.mes-not .notifications .notification-list{
+    position:relative;
+    box-shadow:  0 0 0;
+}
+
+.close-notify{
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: grid;
+    place-items: center;
+    top:.3rem;
+    cursor:pointer;
+    right:.5rem;
+    font-size: .8rem;
+}
+
+.notify-icons{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: .3rem 0;
+}
+.notify-icons > div{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: grid;
+  place-items: center;
+  border:1px solid #f7f4f4;
+  font-size: .7rem;
+}
+.notify-icons > div:hover{
+  background-color:#fff;
+}

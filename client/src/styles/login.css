@@ -1,0 +1,86 @@
+.login-page {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.image-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 3rem;
+    background-image: linear-gradient(#0000003f, #000000d5), url('../../public/images/Login.jpg');
+}
+
+.image-background p {
+    color: #dfdcdc;
+}
+
+.login-page .login-form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+form {
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    width: 100%;
+    padding: 3rem 1rem;
+    margin: 0 auto;
+}
+
+form input {
+    width: 80%;
+    padding: 1rem;
+    border-left: 5px solid blue;
+}
+
+
+button {
+    padding: .7rem;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: auto;
+    background-color: blue;
+    cursor: pointer;
+    width: 87%;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(28, 39, 107);
+}
+
+a {
+    align-self: start;
+
+}
+
+a.account:hover {
+    background-color: transparent;
+}
+
+.demo {
+
+    background-color: rgb(255, 255, 255);
+    color: #202020;
+    font-size: .9rem;
+    padding: .5rem 1rem;
+    box-shadow:  0 7px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.demo:hover{
+    background-color: rgb(78, 174, 253);
+     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}

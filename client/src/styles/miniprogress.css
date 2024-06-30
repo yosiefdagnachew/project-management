@@ -1,0 +1,33 @@
+.mini-circular-progress {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.mini-circular-progress::before {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: white;
+  content: '';
+  animation: anim 2s linear forwards;
+}
+
+div.mini-circular-progress #mini-number {
+  position: relative;
+  z-index: 4;
+  font-size: .55rem;
+  font-weight: 500;
+  color: black;
+}
+
+/* @keyframes anim {
+  0% {
+    background: conic-gradient(blue, 0deg, #ededed 0deg);
+  }
+} */
+

@@ -1,0 +1,431 @@
+/* task style */
+.task-list-header {
+  display: grid;
+  grid-template-columns: 0.7fr 0.23fr;
+  padding: 0.1rem 1rem;
+  text-align: left;
+}
+.task-list-header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.task-list-header div button {
+  font-size: 0.8rem;
+  width:40%;
+  display: flex;
+  align-items: center;
+  gap: 0.51rem;
+  padding: 0.5rem;
+}
+
+.task-container {
+  display: grid;
+  height: 60vh;
+  animation: expandCollapse 0.3s ease-in-out;
+}
+
+.expanded {
+  grid-template-columns: 0.65fr 0.3fr;
+}
+
+.collapsed {
+  grid-template-columns: 1fr;
+}
+
+.expanded #taskinformation {
+  transform: translateX(0%);
+}
+
+.expanded #taskinformation .due-date > div:nth-child(1)
+{
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.expanded #taskinformation .due-date > div:nth-child(1) .date-info{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.expanded #taskinformation .due-date > div:nth-child(1) form#update-task-duedate{
+  display: flex;
+  background-color: red;
+  width: 60%;
+
+}
+.expanded #taskinformation .due-date > div:nth-child(1) > .date-info > span{
+  font-size: .9rem;
+  background-color: rgb(223, 8, 8);
+  color: #fff;
+  padding: .3rem;
+  border-radius: 4px;
+}
+.expanded #taskinformation .due-date > div:nth-child(1) >.date-info >*{
+  margin: 0;
+}
+
+.expanded #taskinformation .due-date >div> div:nth-child(2){
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.479);
+  border: 1px solid transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.expanded #taskinformation .due-date >div > div:nth-child(2):hover{
+  background-color: transparent;
+  border: 1px solid #33333311;
+}
+
+.collapsed #taskinformation {
+  transform: translateX(100%);
+}
+
+#taskinformation {
+  overflow: hidden;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: #ffffff;
+  width: 500px;
+  box-shadow: 0 12px 21px rgba(0, 0, 0, 0.062);
+}
+
+#taskinformation .EditEntities{
+  max-height:90%;
+  overflow:auto;
+  text-align: left;
+  padding: 1rem;
+}
+
+#taskinformation .titledec {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #eee;
+  overflow:hidden;
+  overflow-y: auto;
+}
+
+#taskinformation .titledec > div {
+  display: flex;
+}
+
+#taskinformation .titledec > div > * {
+  margin: 0;
+}
+
+#taskinformation .titledec > * {
+  margin: 0;
+}
+
+#taskinformation .titledec h2 {
+  font-size: 1rem;
+  color: #4b4848;
+  padding: 0;
+}
+
+.description p {
+  font-size: 0.7rem;
+}
+
+#taskinformation .titledec > div {
+  padding: 0.2rem 1rem;
+  display: grid;
+  grid-template-columns: 0.9fr 0.1fr;
+}
+
+#taskinformation .titledec > div input,
+#taskinformation .titledec > div textarea {
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  outline: none;
+  width: 70%;
+  resize: none;
+}
+
+.expanded #taskinformation .due-date  div.update-task-duedate{
+  width: 130%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.expanded #taskinformation .due-date  div.update-task-duedate > *{
+  padding: 0;
+}
+
+.expanded #taskinformation .due-date  div.update-task-duedate > input:nth-child(1){
+  padding: .3rem 1rem;
+}
+
+.expanded #taskinformation .due-date  div.update-task-duedate > input:nth-child(2){
+  padding: .3rem;
+  cursor: pointer;
+}
+
+#taskinformation .info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(231, 235, 236);
+  padding: 1rem;
+  color:#474545;
+  transition: all 1s ease-in-out;
+}
+
+#taskinformation .more-information {
+  place-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start;
+  max-width: 90%;
+  margin: auto;
+}
+
+#taskinformation .more-information > * {
+  margin:.5rem;
+}
+
+#taskinformation .more-information > div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#taskinformation .more-information div > * {
+  flex: 1;
+}
+
+#taskinformation .more-information > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: left;
+  position: relative;
+}
+
+#taskinformation .more-information .members-to-assign{
+  display: flex;
+  flex-direction: column;
+  max-height: 440px;
+  flex-wrap: nowrap;
+  background-color: #ebe6e6;
+  padding: 1rem 1rem;
+  gap:.25rem;
+}
+
+#taskinformation .more-information .members-to-assign>*{
+  margin: 0;
+}
+
+#taskinformation .more-information .members-to-assign #team-member{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  padding:.01rem 1rem .7rem 1rem;
+  border-radius:3px;
+}
+#taskinformation .more-information .members-to-assign .team-member-manager{
+  background-color: #4b5dff;
+  color:#fff;
+}
+#taskinformation .more-information .members-to-assign .team-member{
+   background-color: #fff;
+    transition:all .3s ease-in;
+    border:1px solid #44444400;
+}
+#taskinformation .more-information .members-to-assign #team-member:hover{
+  border:1px solid #7e7c7c;
+  box-shadow:0 4px 17px rgba(0, 0, 0, 0.11)
+}
+
+#taskinformation .more-information .members-to-assign #team-member .personal-info{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+#taskinformation .more-information .members-to-assign #team-member .personal-info >div{
+  display: flex;
+ flex-direction: column;
+}
+#taskinformation .more-information .members-to-assign #team-member .personal-info >div > *{
+ margin: 0;
+}
+
+#taskinformation .more-information .members-to-assign #team-member .image-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#taskinformation .more-information .members-to-assign #team-member .image-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#taskinformation .more-information > div > div > * {
+  background-color: #dbdfe0;
+  margin: 0;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0.4rem 1rem;
+  border: 2px solid rgba(166, 166, 250, 0);
+  font-size: 0.7rem;
+  color: #1f1e1e;
+  animation: animates .3s linear;
+}
+
+#taskinformation .more-information > div > p{
+  background-color: #eee;
+  margin: 0;
+  padding: .6rem;
+}
+#taskinformation .more-information > div > div > *:hover {
+  border: 2px solid rgb(57, 57, 58);
+}
+#taskinformation .more-information > div > div p.selectedPriorty {
+  background-color: #172952;
+  border: 2px solid rgb(9, 9, 44);
+  color: #fff;
+}
+#taskinformation .more-information > div > div p.selectedProgress {
+  background-color: #172952;
+  border: 2px solid rgb(9, 9, 46);
+  color: #fff;
+}
+#taskinformation .more-information > div > p {
+  display: grid;
+  grid-template-columns: 0.6fr 0.3fr 0.1fr;
+  width: 100%;
+  place-items: start;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+#taskinformation .more-information p span {
+  background-color: rgb(243, 242, 239);
+  padding: 0.1rem 0.5rem;
+}
+
+#taskinformation .more-information p:nth-child(3) span {
+  font-size: 0.7rem;
+}
+#taskinformation .close-icon {
+  cursor: pointer;
+}
+
+#taskinformation .edit-icon {
+  width: 20px;
+  height: 20px;
+  padding: 0.31rem;
+  background-color: #f0ebeb;
+  border-radius: 50%;
+  color: #555252;
+  cursor: pointer;
+}
+
+#taskinformation .done {
+  background-color: rgb(127, 182, 127);
+  color: #fff;
+}
+
+.tasklist {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  overflow: auto;
+}
+
+.tasklist .task {
+  padding: 0rem 2rem;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin: 0;
+  flex: 1;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tasklist a {
+  width: 100%;
+  color: #6e6c6c;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.tasklist a:hover {
+  background-color: transparent;
+  transform: scale(1.01);
+}
+.tasklist .task,
+.tasklist .task div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.tasklist .selectedTask > div {
+  border: 1px solid rgb(183, 183, 252);
+  border-left: 5px solid #5f9dee;
+  color: #000000;
+  background-color: #f3efef;
+}
+.taskSelected {
+  color: blue;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+.tasklist .task .priority {
+  padding: 0.1rem 0.3rem;
+  border-radius: 20px;
+  width: 70px;
+}
+.tasklist .task .red {
+  background-color: rgb(247, 77, 77);
+  color: #fff;
+}
+.tasklist .task .orange {
+  background-color: rgb(255, 253, 125);
+  color: #222020;
+}
+.tasklist .task .green {
+  color: #ffffff;
+  background-color: rgb(110, 207, 110);
+}
+  
+@keyframes animates {
+  
+    0%{
+      opacity: 0;
+      transform: translateX(50%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+}

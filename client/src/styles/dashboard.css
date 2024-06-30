@@ -1,0 +1,324 @@
+section.dashboard {
+  background-color: rgb(247, 243, 243);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 7% auto;
+  height: 100vh;
+}
+
+.header-section {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+}
+
+.header-section .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  position: relative;
+}
+.header-section .contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 0 3rem;
+}
+
+.header-section .contents > h2 {
+  font-size: 1rem;
+  color: #302f2f;
+}
+
+.search input {
+  border: none;
+  padding: 0.3rem;
+  outline: none;
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+}
+.profile .pic {
+  overflow: hidden;
+}
+
+.profile .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* side bar styles */
+.sidbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidbar .uppericon div {
+  cursor: pointer;
+  background-color: transparent;
+  color: #141414;
+}
+.sidbar .uppericon div.active {
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.466);
+  transition: all 0.3s ease-in-out;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+.sidbar .uppericon div > span,
+.sidbar > .lowericon > div > span {
+  padding: 0.2rem 0.4rem;
+  background-color: rgb(255, 255, 255);
+  color: #3a3838;
+  position: absolute;
+  transform: translateX(40px);
+  opacity: 0;
+  left: 0;
+  z-index: 12;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.123);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.sidbar .uppericon div:hover > span,
+.sidbar > .lowericon > div:hover > span {
+  transform: translateX(45px);
+  opacity: 1;
+}
+.sidbar > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.sidbar > div.lowericon > * {
+  background-color: transparent;
+  color: #1d1c1c;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.sidbar > .lowericon > div.active{
+  transition: all .3s ease-in-out;
+  background-color: rgb(3, 3, 3);
+  color: #fff;
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.466);
+}
+
+.sidbar > .lowericon > div a{
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  padding: .5rem;
+  color: #000;
+}
+.sidbar > .lowericon > div a:hover{
+  color: #817f7f;
+  background-color: #333;
+}
+
+.sidbar > div > * {
+  font-size: 1rem;
+  width: 40px;
+  height: 40px;
+  background-color: #1d1c1c;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+}
+.profile {
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  width: 200px;
+  border-radius: 40px;
+  margin-right: 2rem;
+}
+
+.profile .pic {
+  width: 40px;
+  height: 40px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.profile .user-info {
+  display: flex;
+  flex-direction: column;
+}
+.profile .user-info > * {
+  margin: 0;
+  text-align: left;
+}
+.profile .user-info p {
+  font-size: 0.7rem;
+  color: #4e4c4c;
+}
+
+.main-section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 4% auto;
+}
+
+.userdatas {
+  display: grid;
+  transition: all 0.3s ease-in-out;
+}
+
+.userdatas .projects {
+  margin-top: 0.5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 1.5rem;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+.projects {
+  position: relative;
+}
+.projects .pro-header .current-year {
+  display: flex;
+  color: #535151;
+  font-weight: 100;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.pro-header .projects-status {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.pro-header .projects-status > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.pro-header .projects-status > div.createProjecticon {
+  background-color: rgba(121, 216, 245, 0.473);
+  padding: 0.5rem;
+  color: #3a3838;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pro-header .projects-status > div.createProjecticon:hover {
+  background-color: rgba(67, 151, 177, 0.473);
+  padding: 0.5rem;
+  color: #ffffff;
+}
+
+.pro-header .projects-status > div:nth-child(1),
+.pro-header .projects-status > div:nth-child(2),
+.pro-header .projects-status > div:nth-child(3),
+.pro-header .projects-status > div:nth-child(4),
+.pro-header .projects-status > div:nth-child(5),
+.pro-header .projects-status > div:nth-child(6) {
+  border-right: 1px solid #eee;
+}
+
+.pro-header .projects-status > div > * {
+  margin: 0;
+}
+.pro-header .projects-status > div > h3 {
+  font-size: 0.91rem;
+}
+.pro-header .projects-status > div > p {
+  font-size: 0.8rem;
+  /* color:#696666; */
+}
+
+
+.feedback-date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.feedback-date span{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(121, 121, 233);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+}
+
+.feedback-date span:hover{
+  background-color: blue;
+}
+
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.element {
+  animation: animate 1s ease-in-out;
+}
+
+.search
+
+
+/* searched projects style */
+.serachedProjects {
+  position: absolute;
+  background-color: white;
+  z-index: 20;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 230px;
+  top: 2.5rem;
+  left: 0;
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.123);
+  padding: 1rem;
+}
+
+.serachedProjects .project {
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #eeeeee00;
+}
+
+.serachedProjects .project:hover {
+  background-color: #eafcdd;
+  border: 1px solid #eee;
+}

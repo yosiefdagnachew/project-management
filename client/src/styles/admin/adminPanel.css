@@ -1,0 +1,74 @@
+.admin-container {
+  overflow: hidden;
+}
+
+.admin-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.5rem 1rem;
+  background-color:#58c1fd;
+}
+
+.admin-profile{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.logout{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background-color:#eceaea;
+  display:grid;
+  place-items:center;
+  margin: 0 1rem;
+  cursor:pointer;
+}
+.logout:hover{
+  background-color:#053dd6;
+  color:#fff;
+}
+
+.admin-profile > div:nth-child(2){
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+}
+.admin-profile > div:nth-child(2) > *{
+  margin:0;
+}
+
+.admin-profile > div:nth-child(2) > p:nth-child(2)
+{
+  font-size:.9rem;
+  color:#575555;
+}
+
+.admin-profile #profile{
+  width:40px;
+  height:40px;
+  overflow:hidden;
+}
+.admin-profile #profile img{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+}
+
+.contaienr {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .contaienr {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    overflow: auto;
+  }
+}

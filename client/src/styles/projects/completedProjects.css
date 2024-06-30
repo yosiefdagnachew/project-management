@@ -1,0 +1,75 @@
+
+.completedProjects-container{
+    background-color: #fff;
+    width: 92vw;
+    padding: 1rem;
+}
+
+
+.completedProjects{
+    margin-top: .51rem;
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr;
+    align-items: center;
+    border: 1px solid #eee;
+    gap: 3rem;
+    cursor: pointer;
+    padding: 0 .3rem;
+    transition: all .3s ease-in-out;
+}
+
+.completedProjects:hover{
+    border: 1px solid #333;
+    border-radius: 10px;
+    transform: scale(.98);
+}
+
+div.completedProjects-container div.completedProjects > div.profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.completedProjects > div.profile > img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.completedProjects .project h3{
+    display: flex;
+    align-items: center;
+}
+
+.completedProjects .project h3 p{
+    color: #6b6767;
+    font-weight: 100;
+}
+
+.completedProjects .project > *{
+    margin: 0;
+}
+
+.completedProjects .project > h3{
+    font-size: .9rem;
+}
+
+.completedProjects .project > p{
+    font-size: .8rem;
+}
+
+.completedProjects .more-info,.completedProjects .more-info > div{
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+}
+
+.completedProjects .more-info > div{
+    gap: .5rem;
+}
+
+.completedProjects .more-info{
+    justify-self: end;
+    font-size: .8rem;
+    gap: 3rem;
+}

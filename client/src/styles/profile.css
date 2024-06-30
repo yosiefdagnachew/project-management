@@ -1,0 +1,204 @@
+section#profile {
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 0.51rem;
+  display: grid;
+  grid-template-rows: 0.2rf 0.8fr;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+section#profile > * {
+  margin: 0;
+  width: 100%;
+}
+
+section#profile .employeementInfo {
+  display: grid;
+  width: 100%;
+ 
+}
+
+section#profile .employeementInfo .profile-navigation {
+  display: grid;
+  place-items: center;
+}
+
+section#profile .employeementInfo .profile-navigation ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  color: #4e4c4c;
+  font-size: 0.9rem;
+}
+section#profile .employeementInfo .profile-navigation ul li {
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+}
+section.profile .employeementInfo .profile-navigation ul li:hover {
+  background-color: #eee;
+}
+
+#profile .userrating {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 1rem auto;
+  background: linear-gradient(to right,transparent, #f8f7f7, #fff);
+  padding: 2rem 1rem;
+}
+
+.profile .userrating > div {
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+#profile .userrating > div > * {
+  margin: 0;
+}
+#profile .userrating > div h1 {
+  font-size: 2.4rem;
+}
+#profile .userrating > div h1 span {
+  font-size: 1.4rem;
+}
+#profile .userrating > div p {
+  color: #636060;
+}
+
+.profileinformation {
+  display: grid;
+  grid-template-columns: 0.2fr 0.4fr 0.2fr 0.2fr;
+  background: linear-gradient(to right,transparent, #f8f7f7, #fff);
+  margin: auto;
+  gap: 2rem;
+  position: relative;
+  max-height: 150px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.profiliepic {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.profiliepic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.personal-info,
+.contact-me {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.contact-me {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-top: auto;
+  margin-top: 1rem;
+}
+
+.personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin-top: 1rem;
+}
+
+.personal-info > *,
+.contact-me > * {
+  margin: 0;
+}
+.personal-info > p:nth-of-type(1) {
+  margin-bottom: 2rem;
+  color: #c4bebe;
+}
+
+.personal-info > p,
+.contact-me > p {
+  font-size: 0.8rem;
+  color: #7e7a7a;
+  text-align: left;
+}
+
+.social {
+  margin: 1rem;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileinformation .edit-profile {
+  margin-top: 1rem;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 3rem;
+  color: #464343;
+}
+
+.profileinformation .edit-profile:hover{
+  background-color: #eee;
+}
+
+.tasksprogress {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  background: linear-gradient(to right,transparent, #f8f7f7, #fff);
+
+}
+.tasksprogress > div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tasksprogress h1 {
+  font-size: 3rem;
+}
+
+.edioption{
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 2.3rem;
+  right: 2rem;
+  width: 170px;
+  text-align: left;
+  box-shadow: 0 7px 17px rgba(0,0,0,.1);
+}
+
+.edioption li{
+  list-style: none;
+  padding: .2rem 1rem;
+  color: #4e4c4c;
+  font-size: .9rem;
+}
+
+.edioption li:hover{
+  background-color: #eee;
+}

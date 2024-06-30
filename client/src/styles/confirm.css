@@ -1,0 +1,62 @@
+.confirmation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(43, 41, 41, 0.555);
+    backdrop-filter: blur(1px);
+    display: grid;
+    place-items: center;
+    align-items: start;
+    z-index: 10;
+}
+
+.confirmation>div{
+    display: grid;
+    margin-top: 10rem;
+    top: 10%;
+    place-items: center;
+    width: 50%;
+    background-color: #ffffffd8;
+    padding:3rem 2rem;
+    position: relative;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.103);
+    border-radius: 10px;
+    color: #eb2424;
+}
+.confirmation div > p{
+    width: 100%;
+    font-size: 1rem;
+    text-align: left;
+    color: #292727;
+}
+
+.confirmation .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    gap: 1rem;
+}
+
+.confirmation .btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.confirmation .btns > button{
+    padding: .3rem 1rem;
+    font-size: 1rem;
+    background-color: #15a9ff;
+}
+.confirmation .btns > button:nth-child(1){
+    background-color: #eb5252;
+}
+
+.confirmation .icon{
+    font-size: 3rem;
+}
